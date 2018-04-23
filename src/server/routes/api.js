@@ -10,9 +10,9 @@ import User from '../models/user'
 import LocalPolls from '../models/polls-local'
 import GooglePolls from '../models/polls-google'
 
-import dotenv from 'dotenv'
 
-dotenv.config({ verbose: true})
+
+
 //
 
 const router = express.Router({caseSensitive: true})
