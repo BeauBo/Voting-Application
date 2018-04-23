@@ -51,7 +51,7 @@ router.get('*', (req, res, next) => {
 
 
 
-router.post('/api/signup', (req, res, next) => {
+router.post('https://voteplex-voting.herokuapp.com/api/signup', (req, res, next) => {
     const {username, email, password } = req.body
     
     const user = {
@@ -78,7 +78,7 @@ router.post('/api/signup', (req, res, next) => {
     
 })
 
-router.post('/api/login', (req, res, next) => {
+router.post('https://voteplex-voting.herokuapp.com/api/login', (req, res, next) => {
     const { email, password } = req.body
     
     User.findOne({email: email}).then((payload) => {
@@ -113,7 +113,7 @@ router.post('/api/login', (req, res, next) => {
     })
 })
 
-router.post('/api/setting', (req, res, next) => {
+router.post('https://voteplex-voting.herokuapp.com/api/setting', (req, res, next) => {
     const { email, current, newPassWord} = req.body
     User.findOne({email}).then((payload) => {
         if(bcrypt.compareSync(current, payload.password)){
@@ -134,7 +134,7 @@ router.post('/api/setting', (req, res, next) => {
 })
 
 
-router.post('/api/submitPoll', (req, res, next) => {
+router.post('https://voteplex-voting.herokuapp.com/api/submitPoll', (req, res, next) => {
     const { userId, pollName, options, local } = req.body
     const pollOptions = []
         options.map((option) => {
@@ -168,7 +168,7 @@ router.post('/api/submitPoll', (req, res, next) => {
         })
 })
 
-router.post('/api/votes', (req, res, next) => {
+router.post('https://voteplex-voting.herokuapp.com/api/votes', (req, res, next) => {
     const { userId, pollName, local } = req.body
     
    if(userId, pollName){
@@ -181,7 +181,7 @@ router.post('/api/votes', (req, res, next) => {
     }
 })
 
-router.post('/api/updateVotes',(req, res, next) => {
+router.post('https://voteplex-voting.herokuapp.com/api/updateVotes',(req, res, next) => {
     const { userId, pollName, selectedOption, local } = req.body
     if(userId){
         const dataCollection = local? LocalPolls : GooglePolls
@@ -199,7 +199,7 @@ router.post('/api/updateVotes',(req, res, next) => {
     
 })
 
-router.post('/api/mypoll', (req, res, next) => {
+router.post('https://voteplex-voting.herokuapp.com/api/mypoll', (req, res, next) => {
     const {userId, local} = req.body
     if(userId){
         const dataCollection = local? LocalPolls : GooglePolls
@@ -213,7 +213,7 @@ router.post('/api/mypoll', (req, res, next) => {
     
 })
 
-router.post('/api/deleteMyPoll', (req, res, next) => {
+router.post('https://voteplex-voting.herokuapp.com/api/deleteMyPoll', (req, res, next) => {
     const { userId, deletedPoll, local } = req.body
     if(userId){
         const dataCollection = local? LocalPolls : GooglePolls
