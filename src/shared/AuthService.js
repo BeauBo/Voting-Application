@@ -8,7 +8,7 @@ export default class AuthService {
 
     signUp(username, email, password){
         
-        return this.fetch(`/api/signup`, {
+        return this.fetch(`https://voteplex-voting.herokuapp.com/api/signup`, {
         method: 'POST',
         body: JSON.stringify({
             username,
@@ -30,7 +30,7 @@ export default class AuthService {
             alert('Please enter email and password')
             return 
         }
-        return this.fetch(`/api/login`, {
+        return this.fetch(`https://voteplex-voting.herokuapp.com/api/login`, {
             method: 'POST',
             body: JSON.stringify({
                 email,

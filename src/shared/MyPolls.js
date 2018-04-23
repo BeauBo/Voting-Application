@@ -16,7 +16,7 @@ class MyPolls extends Component {
     componentDidMount(){
         const userId = this.props.userId
         const local = this.props.local
-        fetch('/api/mypoll',{
+        fetch('https://voteplex-voting.herokuapp.com/api/mypoll',{
             headers: {
                 'Content-Type': 'application/json'
             },
@@ -74,7 +74,7 @@ class MyPolls extends Component {
         const deletedPoll = e.currentTarget.dataset.poll
         const userId = this.props.userId
         const local = this.props.local
-        fetch('/api/deleteMyPoll',{
+        fetch('https://voteplex-voting.herokuapp.com/api/deleteMyPoll',{
             headers: {
                 'Content-Type': 'application/json'
             },

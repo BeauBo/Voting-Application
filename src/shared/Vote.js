@@ -24,7 +24,7 @@ class Vote extends Component {
         const userId =  this.Auth.getProfile()? this.Auth.getProfile().payload._id : this.Auth.getGoogleProfile()._id
         const local = this.Auth.getProfile()? true : false
        
-        fetch(`/api/votes`,{
+        fetch(`https://voteplex-voting.herokuapp.com/api/votes`,{
             headers: {
             'Content-Type': 'application/json'
             },
@@ -93,7 +93,7 @@ class Vote extends Component {
         const pollName = this.state.pollName
         const local = this.state.local
         
-        fetch('/api/updateVotes',{
+        fetch('https://voteplex-voting.herokuapp.com/api/updateVotes',{
             headers: {
                 'Content-Type': 'application/json'
                 },

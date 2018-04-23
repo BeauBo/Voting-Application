@@ -118,7 +118,7 @@ class NewPoll extends Component {
 
     handleSubmit(e){
         e.preventDefault()
-        fetch('/api/submitPoll',{
+        fetch('https://voteplex-voting.herokuapp.com/api/submitPoll',{
             headers : {
                 'Content-Type': 'application/json'
             },
