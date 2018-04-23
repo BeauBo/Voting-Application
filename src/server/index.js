@@ -17,7 +17,7 @@ import authRoutes from './routes/auth'
 dotenv.config({ verbose: true})
 
 // Creat a db connection 
-const db = process.env.localDB
+const db = const db = process.env.MONGODB_URI || process.env.localDB
 
 //Creat port for server to listen on 
 const port = process.env.PORT || 4000
