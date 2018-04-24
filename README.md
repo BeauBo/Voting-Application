@@ -12,3 +12,5 @@ Full stack application
 > Google Chart API
 ## Render Methond
 > Server Side Rendering
+## To see the result
+*https://voteplex-voting-app.herokuapp.com/*
