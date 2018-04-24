@@ -4,6 +4,9 @@ import express from 'express'
 import GoogleUser from './models/googleUser'
 
 
+import dotenv from 'dotenv'
+
+dotenv.config({ verbose: true})
 
 
 passport.use(

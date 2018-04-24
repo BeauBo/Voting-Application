@@ -23,6 +23,7 @@
     "bcrypt-nodejs": "0.0.3",
     "cors": "^2.8.4",
     "css-loader": "^0.28.11",
+    "dotenv": "^5.0.1",
     "express": "^4.16.2",
     "express-jwt": "^5.3.1",
     "jsonwebtoken": "^8.2.0",

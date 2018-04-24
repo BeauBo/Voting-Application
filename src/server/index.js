@@ -1,7 +1,7 @@
 import express from 'express'
 import cors from 'cors'
 import mongoose from 'mongoose'
-
+import dotenv from 'dotenv'
 import routes from './routes/api'
 import bodyParser from 'body-parser'
 import passport from 'passport'
@@ -13,12 +13,13 @@ import authRoutes from './routes/auth'
 
 
 
-
+//Load in environment variables
+dotenv.config({ verbose: true})
 
 // Creat a db connection 
-const db = const db = process.env.MONGODB_URI || process.env.localDB
-
-//Creat port for server to listen on 
+const db = process.env.MONGODB_URI || process.env.localDB
+//Creat port for server to listen on
+ 
 const port = process.env.PORT || 4000
 
 //instatiate express app

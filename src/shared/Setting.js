@@ -86,7 +86,7 @@ class Setting extends Component {
         e.preventDefault()
         const email = this.Auth.getProfile().payload.email
         if(this.state.newPassWord === this.state.newConfirm){
-            fetch('https://voteplex-voting.herokuapp.com/api/setting', {
+            fetch('/api/setting', {
                 headers: {
                     'Content-Type': 'application/json'
                 },
